@@ -1,4 +1,4 @@
-class z-godzilla_ekp < Formula
+class Godzillaekp < Formula
     desc 'Godzilla is a cross-platform web shell management tool.'
     homepage 'https://github.com/ekkoo-z/Z-Godzilla_ekp'
     url 'https://github.com/ekkoo-z/Z-Godzilla_ekp/releases/download/V1.1-Godzilla_ekp/Godzilla_ekp1.1.jar'
@@ -7,7 +7,6 @@ class z-godzilla_ekp < Formula
 
     def install
         libexec.install Dir['*']
-        bin.write_jar_script libexec/'Godzilla_ekp#{version}.jar', 'godzilla_ekp'
+        bin.write_jar_script libexec/'Godzilla_ekp1.1.jar', 'godzilla_ekp'
     end
-
 end

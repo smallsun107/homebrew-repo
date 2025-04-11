@@ -1,4 +1,4 @@
-class godzilla < Formula
+class Godzilla < Formula
     desc 'Godzilla is a cross-platform web shell management tool.'
     homepage 'https://github.com/BeichenDream/Godzilla'
     url 'https://github.com/BeichenDream/Godzilla/releases/download/v4.0.1-godzilla/godzilla.jar'
@@ -9,5 +9,4 @@ class godzilla < Formula
         libexec.install Dir['*']
         bin.write_jar_script libexec/'godzilla.jar', 'godzilla'
     end
-
 end
