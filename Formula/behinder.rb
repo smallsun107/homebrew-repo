@@ -6,6 +6,7 @@ class Behinder < Formula
     sha256 '642d4a3930d08a3b54828c661eab62021505938bc5c21b2af04d10218b2de5d7'
 
     def install
+        ENV["LANG"] = "en_US.UTF-8"  # 解决 unzip 非 UTF-8 文件名报错问题
         libexec.install Dir['*']
         (bin/"behinder").write <<~EOS
             #!/bin/bash
