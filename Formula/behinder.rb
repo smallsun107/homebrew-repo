@@ -7,6 +7,7 @@ class Behinder < Formula
 
     def install
         ENV["LANG"] = "en_US.UTF-8"  # 解决 unzip 非 UTF-8 文件名报错问题
+        ENV["LC_ALL"] = "en_US.UTF-8"
         libexec.install Dir['*']
         (bin/"behinder").write <<~EOS
             #!/bin/bash
