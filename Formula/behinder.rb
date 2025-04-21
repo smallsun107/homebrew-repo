@@ -17,10 +17,11 @@ class Behinder < Formula
         libexec.install Dir["*"]
         (bin/"behinder").write <<~EOS
             #!/bin/bash
-            FX_PATH="#{libexec}/javafx-sdk-17.0.14/lib"
+            FX_PATH="javafx-sdk-17.0.14/lib"
+            cd "#{libexec}"
             exec java --module-path "$FX_PATH" \\
-                    --add-modules javafx.controls,javafx.fxml,javafx.web \\
-                    -jar "#{libexec}/Behinder.jar" "$@"
+                --add-modules javafx.controls,javafx.fxml,javafx.web \\
+                -jar "Behinder.jar" "$@"
         EOS
         chmod 0755, bin/"behinder"
     end
