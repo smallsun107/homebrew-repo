@@ -24,4 +24,5 @@ class Behinder < Formula
             -jar "#{libexec}/Behinder.jar" "$@"
         EOS
         chmod 0755, bin/"behinder"
+    end
 end
