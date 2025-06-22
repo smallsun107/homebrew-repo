@@ -1,15 +1,11 @@
 cask "v2rayn" do
+    arch arm: "arm64", intel: "64"
     version "7.12.7"
 
-    on_intel do
-        sha256 '41e9ef4c6986ba1fdabef99c2baea6fdeb9863a723290eece9d3da3dfd07c5a6'
-        url "https://github.com/2dust/v2rayN/releases/download/#{version}/v2rayN-macos-#{arch}.dmg"
-    end
-    
-    on_arm do
-        sha256 'dee33c76ce98fee472246bf14cc034c69643244acf0ea5bd1b0d746cab51340c'
-        url "https://github.com/2dust/v2rayN/releases/download/#{version}/v2rayN-macos-#{arch}.dmg"
-    end
+    sha256  arm:   "dee33c76ce98fee472246bf14cc034c69643244acf0ea5bd1b0d746cab51340c",
+            intel: "41e9ef4c6986ba1fdabef99c2baea6fdeb9863a723290eece9d3da3dfd07c5a6"
+
+    url "https://github.com/2dust/v2rayN/releases/download/#{version}/v2rayN-macos-#{arch}.dmg"
 
     name "v2rayN"
     desc "代理客户端，支持 Xray、sing-box 等"
