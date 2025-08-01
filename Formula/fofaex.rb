@@ -1,4 +1,4 @@
-class fofaex < Formula
+class Fofaex < Formula
     desc 'FOFA EX is a comprehensive red team exploitation tool implemented based on the FOFA API.'
     homepage 'https://github.com/10cks/fofaEX'
     url 'https://github.com/10cks/fofaEX/releases/download/3.3/fofaEX_jar.zip'
