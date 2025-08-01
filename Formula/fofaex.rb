@@ -7,7 +7,13 @@ class Fofaex < Formula
 
     def install
         libexec.install Dir['*']
-        bin.write_jar_script libexec/'fofaEX.jar', 'fofaex'
+        (bin/"fofaex").write <<~EOS
+            #!/bin/bash
+            mkdir -p "$HOME/.config/fofaex"
+            cd "$HOME/.config/fofaex"
+            exec java -jar "#{libexec}/fofaEX.jar" "$@"
+        EOS
+        chmod 0755, bin/"fofaex"
     end
 
 end
