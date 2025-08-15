@@ -1,14 +1,14 @@
 cask 'yakit' do
-    version 'v1.4.3-0718'
+    version 'v1.4.4-0808'
 
     on_intel do
-        sha256 'dcada9021de6cb103de1b63a61de98dc8a34e21b70ba5a9216578adb7957b473'
-        url "https://github.com/yaklang/yakit/releases/download/v1.4.3-0718/Yakit-1.4.3-0718-darwin-x64.dmg"
+        sha256 'b504dbdfb5dcd3b30bb3f7eab1ffbf19d7fad9b13c73671b9252f7df994fb6f5'
+        url "https://github.com/yaklang/yakit/releases/download/v1.4.4-0808/Yakit-1.4.4-0808-darwin-x64.dmg"
     end
 
     on_arm do
-        sha256 'f6461103283f0a322a84136212a4e71c543bf9a4bbcb089f7cd8e4e598fe5175'
-        url "https://github.com/yaklang/yakit/releases/download/v1.4.3-0718/Yakit-1.4.3-0718-darwin-arm64.dmg"
+        sha256 'cff734753c327943b73576d0a6c968cea736db208b61088be028f1a415625cd4'
+        url "https://github.com/yaklang/yakit/releases/download/v1.4.4-0808/Yakit-1.4.4-0808-darwin-arm64.dmg"
     end
 
     name 'Yakit'
